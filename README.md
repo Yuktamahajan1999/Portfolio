@@ -27,7 +27,6 @@ This portfolio has been built using **React** for the frontend and **Node.js** w
 - **Frontend**: React, HTML, CSS, JavaScript, Tailwind CSS
 - **Backend**: Node.js, Express.js
 - **DataBase**: MongoDB
-- **Tools**: Git, GitHub, Docker, Webpack
-- **Deployment**: Netlify, Vercel, Heroku
+- **Tools**: Git, GitHub
 
 
