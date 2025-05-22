@@ -3,7 +3,6 @@ import React from 'react'
 const Skills = () => {
     return (
         <div>
-            {/* Simple Skills Section */}
             <section className="skills-section">
                 <h2 className="section-title">Skills</h2>
 
@@ -17,6 +16,7 @@ const Skills = () => {
                             <li>HTML5 & CSS3</li>
                             <li>RESTful APIs</li>
                             <li>Git Version Control</li>
+                             <li>Python (ongoing)</li>
                         </ul>
                     </div>
 
