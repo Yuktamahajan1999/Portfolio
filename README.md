@@ -24,11 +24,19 @@ This portfolio is built using **React** for the frontend and **Node.js** with **
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: React, HTML, CSS, JavaScript, Tailwind CSS
-- **Backend**: Node.js, Express.js
-- **DataBase**: MongoDB
-- **Tools**: Git, GitHub
-- **Learning** : Python
+-**Frontend**: React, CSS
+
+-**Backend**: Node.js, Express.js 
+
+-**Tools**: Git, GitHub
+
+📚 Skills & Learning
+
+-**JavaScript**, **HTML** , **Tailwind CSS**, **MongoDB**
+
+-**Python (currently learning)**
+
+
 
 
 
