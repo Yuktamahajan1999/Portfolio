@@ -7,7 +7,7 @@ This portfolio is built using **React** for the frontend and **Node.js** with **
 ---
 
 ## 🔗 Live Demo
-[View Portfolio](https://your-portfolio-link.com)
+[View Portfolio](portfolio-self-ten-75.vercel.app)
 
 ---
 
