@@ -7,8 +7,12 @@ const sendContactEmail = async (req, res) => {
     return res.status(400).json({ error: 'All fields are required' });
   }
 
+
+
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: "smtp.gmail.com",
+    port: 587,
+    secure: false, 
     auth: {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASS,
@@ -16,24 +20,24 @@ const sendContactEmail = async (req, res) => {
   });
 
   const mailOptions = {
-    from: email,
+    from: process.env.EMAIL_USER,
     to: process.env.EMAIL_USER,
     subject: `Contact Form Submission from ${name}`,
-    text: `
-      You have a new message from your portfolio:
-      Name: ${name}
-      Email: ${email}
-      Message: ${message}
-    `,
+    text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
   };
 
   try {
     const info = await transporter.sendMail(mailOptions);
-    console.log('Email sent:', info.response);
+    console.log('Email sent successfully:', info.response);
     return res.status(200).json({ message: 'Email sent successfully' });
   } catch (error) {
     console.error('Error sending email:', error);
-    return res.status(500).json({ error: 'Failed to send email' });
+    
+    if (error.code === 'EAUTH') {
+      return res.status(500).json({ error: 'Authentication failed. Please check your Gmail App Password.' });
+    }
+    
+    return res.status(500).json({ error: 'Failed to send email. Check server logs for details.' });
   }
 };
 
