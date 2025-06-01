@@ -17,6 +17,7 @@ const Skills = () => {
                             <li>HTML5 & CSS3</li>
                             <li>RESTful APIs</li>
                             <li>Git Version Control</li>
+                             <li>Python (ongoing)</li>
                         </ul>
                     </div>
 

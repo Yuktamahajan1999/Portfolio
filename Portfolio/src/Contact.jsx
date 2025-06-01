@@ -29,32 +29,30 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     const { name, email, message } = formData;
 
     if (!name || !email || !message) {
       toast.error('Please fill out all fields');
       return;
     }
+
     try {
-      await axios.post('http://localhost:8000/api/contact', { email, name, message });
+     await axios.post('http://localhost:3000/api/contact', { name, email, message });
       console.log('Form submitted:', formData);
       setSubmitted(true);
       toast.success('Message sent successfully!');
     } catch (error) {
       console.error('Error sending message:', error);
       toast.error('Failed to send message. Please try again later.');
-      return;    
     }
   };
-  
+
   useEffect(() => {
     if (submitted) {
       const timer = setTimeout(() => {
         setFormData({ name: '', email: '', message: '' });
         setSubmitted(false);
       }, 2000);
-  
       return () => clearTimeout(timer);
     }
   }, [submitted]);
@@ -88,31 +86,26 @@ const Contact = () => {
               type="text"
               placeholder="Name"
               name="name"
-              id="name"
               className="form-input"
               value={formData.name}
               onChange={handleChange}
               required
             />
           </div>
-
           <div className="form-group">
             <input
               type="email"
               placeholder="Email"
               name="email"
-              id="email"
               className="form-input"
               value={formData.email}
               onChange={handleChange}
               required
             />
           </div>
-
           <div className="form-group">
             <textarea
               name="message"
-              id="message"
               placeholder="Message"
               className="form-textarea"
               value={formData.message}
@@ -120,7 +113,6 @@ const Contact = () => {
               required
             ></textarea>
           </div>
-
           <button type="submit" className="submit-button" aria-label="Send message">
             <span>Send Message</span>
             <FaPaperPlane className="submit-icon" />
@@ -128,25 +120,16 @@ const Contact = () => {
         </form>
 
         <div className="social-links">
-          <a
-            href="https://www.linkedin.com/in/yukta-mahajan"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-link"
-          >
+          <a href="https://www.linkedin.com/in/yukta-mahajan" target="_blank" rel="noopener noreferrer" className="social-link">
             <FaLinkedin className="social-icon" />
             <span>LinkedIn</span>
           </a>
-          <a
-            href="https://github.com/Yuktamahajan1999"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-link"
-          >
+          <a href="https://github.com/Yuktamahajan1999" target="_blank" rel="noopener noreferrer" className="social-link">
             <FaGithub className="social-icon" />
             <span>GitHub</span>
           </a>
         </div>
+
         <a href="/path-to-resume.pdf" className="resume-button" download>
           <FaFileDownload className="resume-icon" />
           <span>Download Resume</span>
