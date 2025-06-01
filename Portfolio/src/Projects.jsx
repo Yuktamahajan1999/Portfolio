@@ -18,9 +18,9 @@ const Projects = () => {
         title: 'Todo List',
         description: 'A simple and elegant todo list app to manage your tasks efficiently. Built with React and styled-components for a modern look.',
         tech: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT'],
-        image: '/images/bitebliss.png',
-        github: 'https://github.com/yukta/bite-bliss',
-        live: '',
+        image: 'Images/Todolist.jpeg',
+        github: 'https://github.com/Yuktamahajan1999/Todolist',
+        live: 'https://todolist-lriy.vercel.app/',
         category: 'fullstack',
       },
       {
