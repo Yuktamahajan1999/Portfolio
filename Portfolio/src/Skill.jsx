@@ -3,7 +3,6 @@ import React from 'react'
 const Skills = () => {
     return (
         <div>
-            {/* Simple Skills Section */}
             <section className="skills-section">
                 <h2 className="section-title">Skills</h2>
 
