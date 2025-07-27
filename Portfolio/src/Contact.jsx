@@ -130,7 +130,7 @@ const Contact = () => {
           </a>
         </div>
 
-        <a href="/path-to-resume.pdf" className="resume-button" download>
+        <a href="Resume.pdf" className="resume-button" download>
           <FaFileDownload className="resume-icon" />
           <span>Download Resume</span>
         </a>
